@@ -1,4 +1,4 @@
-# Taipy OLLM Chat Demo
+# Taipy OLLAMA Chat Demo
 
 <p align="center">
   <img src="media/round_conv.png" alt="A conversation about calibers" width="100%"/>
@@ -39,7 +39,7 @@ pip install -r requirements.txt
 ollama pull starling-lm:beta
 ```
 
-OR you can change the model="starling-lm:beta" at the top of the file to the model you want to use
+OR you can change the MODEL="starling-lm:beta" at the top of the file to the model you want to use
 
 4. Then run the code, if you want to run on a different port number feel free
 
