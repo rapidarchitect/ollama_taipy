@@ -24,7 +24,7 @@ A tutorial on how to create this app is available in the <a href="https://docs.t
 1. Clone this repo:
 
 ```bash	
-git clone https://github.com/Avaiga/demo-llm-chat.git
+git clone https://github.com/rapidarchitect/ollama_taipy
 ```
 
 2. Install dependencies:
