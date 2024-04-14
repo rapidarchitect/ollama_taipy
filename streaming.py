@@ -5,7 +5,7 @@ MODEL = "starling-lm:beta"
 client = None
 context = "The following is a conversation with an AI assistant. The assistant is helpful, creative, clever, and very friendly.\n\nHuman: Hello, who are you?\nAI: I am an AI created by Ollama. How can I help you today? "
 conversation = {
-    "Conversation": ["Who are you?", "Hi! I am GPT-4. How can I help you today?"]
+    "Conversation": ["Who are you?", "Hi! I am Ollama. How can I help you today?"]
 }
 current_user_message = ""
 past_conversations = []
@@ -20,7 +20,7 @@ def on_init(state: State) -> None:
     Args:
         - state: The current state of the app.
     """
-    state.context = "The following is a conversation with an AI assistant. The assistant is helpful, creative, clever, and very friendly.\n\nHuman: Hello, who are you?\nAI: I am an AI created by OpenAI. How can I help you today? "
+    state.context = "The following is a conversation with an AI assistant. The assistant is helpful, creative, clever, and very friendly.\n\nHuman: Hello, who are you?\nAI: I am an AI created by Ollama. How can I help you today? "
     state.conversation = {
         "Conversation": ["Who are you?", "Hi! I am Ollama. How can I help you today?"]
     }
@@ -105,7 +105,7 @@ def style_conv(state: State, idx: int, row: int) -> str:
     elif idx % 2 == 0:
         return "user_message"
     else:
-        return "gpt_message"
+        return "ollama_message"
 
 
 def on_exception(state, function_name: str, ex: Exception) -> None:
@@ -131,7 +131,7 @@ def reset_chat(state: State) -> None:
         [len(state.past_conversations), state.conversation]
     ]
     state.conversation = {
-        "Conversation": ["Who are you?", "Hi! I am GPT-4. How can I help you today?"]
+        "Conversation": ["Who are you?", "Hi! I am Ollama. How can I help you today?"]
     }
 
 
